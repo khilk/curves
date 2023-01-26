@@ -1,0 +1,23 @@
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++17
+UseTab: Never
+DerivePointerAlignment: false
+PointerAlignment: Left
+ColumnLimit: 120
+
+AllowShortFunctionsOnASingleLine: None
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true # if false then enums would be formatted as Allman braces style
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+IncludeCategories:
+  - Regex: '^".*"$'              # my includes
+    Priority: 10
+  - Regex: '^<[[:alpha:]_\/]+>$' # STL
+    Priority: 30
+  - Regex: '.*'                  # other libraries
+    Priority: 40
+IncludeBlocks: Regroup
